@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap");
+/* font-weight:500,900 */
+
+body {
+  text-align: center;
+  background-color: rgb(10, 9, 15);
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.heading {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoreboard {
+  border: 2px solid;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  position: relative;
+}
+.scoreboard:before {
+  content: "Your score";
+  font-size: 15px;
+  position: absolute;
+  background-color: #dc143c;
+  padding: 2%;
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.scoreboard:after {
+  content: "Computer score";
+  font-size: 15px;
+  position: absolute;
+  background-color: #dc143c;
+  padding: 2%;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.game {
+  height: 50vh;
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.game img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.game img:active {
+  box-shadow: 0 0 14px 12px rgba(129, 124, 124, 0.57);
+  transform: scale(0.9);
+}
+
+.result {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.result h2 {
+  width: 100%;
+  margin: 0;
+}
+
+.resultContaineer {
+  display: none;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.computerBoard,
+.userBoard {
+  height: 50px;
+  width: 20%;
+  border: 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.userBoard::before {
+  content: "YOU CHOOSE";
+}
+
+.computerBoard::before {
+  content: "PC CHOOSE";
+}
+
+.userBoard::before,
+.computerBoard::before {
+  position: absolute;
+  background-color: crimson;
+  font-size: 12px;
+  top: 0;
+  transform: translateY(-50%);
+}
